@@ -48,6 +48,11 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <div className="h-[200vh] bg-gray-50">
+          <p className="text-xl text-center p-8">
+            Scroll down to see the navbar transition!
+          </p>
+        </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
