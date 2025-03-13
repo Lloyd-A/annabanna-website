@@ -54,8 +54,8 @@ export default function PopularTours() {
   };
 
   return (
-    <div className="relative mt-10 w-full max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-6 animate-fade-in">
+    <div className="relative w-full max-w-6xl mx-auto">
+      <h2 className="pt-10 text-3xl font-bold text-center mb-6 animate-fade-in">
         Most Popular Tours
       </h2>
       <div className="relative flex items-center justify-center">
@@ -98,6 +98,10 @@ export default function PopularTours() {
           <ChevronRight className="h-6 w-6" />
         </Button>
       </div>
+      <p className="flex items-center justify-center text-lg font-bold pb-10">
+        Experience the beauty of Jamaica with some of the most popular and
+        sought after tours
+      </p>
     </div>
   );
 }
