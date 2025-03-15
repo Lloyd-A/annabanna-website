@@ -12,3 +12,4 @@ export { default as JTB } from "./jamaica_tourist_board.png";
 export { default as TPDCO } from "./TPDCo_LOGO.png";
 export { default as TEAM_JA } from "./team_jamaica_logo.png";
 export { default as OCHO_RIOS } from "./ocho_rios.jpg";
+export { default as CERT } from "./certificate_stub.png";

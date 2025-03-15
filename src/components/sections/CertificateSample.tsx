@@ -1,6 +1,26 @@
 "use client";
 
+import { TiltFx } from "@/once-ui/components/TiltFx";
+import Image from "next/image";
+import { CERT } from "@/assets";
+import { RevealFx } from "@/once-ui/components/RevealFx";
+import CertificateInfoCard from "../CertificateInfoCard";
+
 export default function CertificationSample() {
   //TODO: install once-ui and add tilt effect to certificate image like bookmark of threads
-  return <div></div>;
+  return (
+    <RevealFx speed="medium" delay={0} translateY={0}>
+      <div className="relative bg-gray-200 flex flex-row items-center justify-center gap-30 py-16">
+        <TiltFx
+          border="brand-alpha-weak"
+          position="relative"
+          maxWidth={50}
+          className="rounded-lg"
+        >
+          <Image src={CERT} alt="Certificate" />
+        </TiltFx>
+        <CertificateInfoCard />
+      </div>
+    </RevealFx>
+  );
 }
