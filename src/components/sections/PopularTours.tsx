@@ -55,7 +55,7 @@ export default function PopularTours() {
 
   return (
     <div className="relative w-full max-w-6xl mx-auto">
-      <h2 className="pt-10 text-3xl font-bold text-center mb-6 animate-fade-in">
+      <h2 className="pt-10 text-3xl font-bold text-center mb-6 animate-fade-in drop-shadow-md">
         Most Popular Tours
       </h2>
       <div className="relative flex items-center justify-center">
