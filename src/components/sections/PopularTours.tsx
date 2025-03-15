@@ -54,7 +54,7 @@ export default function PopularTours() {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
+    <div className="relative bg-gray-200 w-full max-w-6xl mx-auto">
       <h2 className="pt-10 text-3xl font-bold text-center mb-6 animate-fade-in">
         Most Popular Tours
       </h2>
