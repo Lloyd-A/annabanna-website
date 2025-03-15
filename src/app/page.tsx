@@ -1,5 +1,6 @@
 "use client";
 import { HERO } from "@/assets";
+import Hover from "@/components/Hover";
 import CertificationSample from "@/components/sections/CertificateSample";
 import DriverCertifications from "@/components/sections/DriverCertifications";
 import PopularTours from "@/components/sections/PopularTours";
@@ -16,9 +17,22 @@ export default function Home() {
           Explore Jamaica with AnnaBanna Tours
         </h1>
       </div>
-      <PopularTours />
+      <div className="bg-gray-200">
+        <Hover color="#fde047" delay={0.2} size={10}>
+          <PopularTours />
+        </Hover>
+      </div>
       <DriverCertifications />
-      <CertificationSample />
+      <div className="bg-gray-200">
+        <Hover color="#fde047" delay={0.2} size={10}>
+          <CertificationSample />
+        </Hover>
+      </div>
+
+      {/* <Hover color="red" delay={0.2} size={40}>
+        <div className="h-[100vh]"></div>
+      </Hover> */}
+
       <div className="h-[200vh] bg-gray-50">
         <p className="text-xl text-center p-8">
           Scroll down to see the navbar transition!
