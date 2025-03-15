@@ -54,7 +54,7 @@ export default function PopularTours() {
   };
 
   return (
-    <div className="relative bg-gray-200 w-full max-w-6xl mx-auto">
+    <div className="relative w-full max-w-6xl mx-auto">
       <h2 className="pt-10 text-3xl font-bold text-center mb-6 animate-fade-in">
         Most Popular Tours
       </h2>
@@ -75,7 +75,7 @@ export default function PopularTours() {
                 <Image
                   src={tour.image}
                   alt={tour.name}
-                  className="w-full h-64 object-cover rounded-xl group-hover:scale-105 transition-transform"
+                  className="w-full h-64 object-cover rounded-xl hover:scale-105 transition-transform"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-black/70 text-white p-4 text-lg font-semibold">
                   {tour.name}
