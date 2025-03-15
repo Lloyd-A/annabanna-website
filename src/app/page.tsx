@@ -16,9 +16,7 @@ export default function Home() {
           Explore Jamaica with AnnaBanna Tours
         </h1>
       </div>
-      <div className="bg-gray-200">
-        <PopularTours />
-      </div>
+      <PopularTours />
       <DriverCertifications />
       <CertificationSample />
       <div className="h-[200vh] bg-gray-50">
