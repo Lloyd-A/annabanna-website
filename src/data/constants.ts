@@ -5,6 +5,8 @@ export const tours: Tour[] = [
     id: 1,
     name: "Dunn's River Falls",
     img: JAM,
+    address: "Dunns+River+Falls+Tours",
+    // address: "18.412509925483448, -77.13535912065143",
     overview:
       "Dunn's River Falls is one of Jamaica's most iconic and breathtaking natural attractions, offering a truly unforgettable experience for first-time visitors to the island. Located in Ocho Rios, this majestic waterfall cascades 180 feet down terraced limestone steps, leading into the warm, crystal-clear waters of the Caribbean Sea. The falls are surrounded by lush tropical vegetation, creating a picture-perfect backdrop for adventure and relaxation." +
       "What makes Dunns River Falls so unique is the opportunity to climb the falls  the help  experienced guides. As you scale the smooth, flowing rocks, youll feel the cool, refreshing water rushing past you, offering an exhilarating combination of adventure and natural beauty. The climb is suitable for all ages and skill levels, making it an ideal activity for families, couples, and solo travelers alike." +
@@ -34,6 +36,7 @@ export const tours: Tour[] = [
     id: 2,
     name: "Blue Mountain Hike",
     img: "/images/blue-mountain.jpg",
+    address: "",
     overview: "Experience the breathtaking beauty of Blue Mountain...",
     itemsToBring: ["Hiking boots", "Water", "Backpack", "Snacks", "Camera"],
     faqs: [
