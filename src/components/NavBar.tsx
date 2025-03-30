@@ -1,5 +1,5 @@
 "use client";
-import { LOGO, LOGO2 } from "@/assets";
+import { LOGO2 } from "@/assets";
 import {
   NavigationMenu,
   NavigationMenuItem,
