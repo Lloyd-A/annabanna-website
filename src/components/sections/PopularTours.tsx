@@ -83,8 +83,8 @@ export default function PopularTours() {
                     variant="ghost"
                     className="absolute top-2 right-2 text-white hover:bg-white/20"
                   >
-                    More Info
                     <Info className="w-5 h-5" />
+                    More Info
                   </Button>
                 </div>
               </div>

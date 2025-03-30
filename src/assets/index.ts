@@ -14,3 +14,7 @@ export { default as TEAM_JA } from "./team_jamaica_logo.png";
 export { default as OCHO_RIOS } from "./ocho_rios.jpg";
 export { default as CERT } from "./certificate_stub.png";
 export { default as FALLS } from "./Waterfall.png";
+export { default as TOURS_HERO } from "./island_tours.jpg";
+export { default as MBJ } from "./sangsters_airport.jpg";
+export { default as KIN } from "./kingston_airport.jpg";
+export { default as PLANE } from "./plane.jpg";

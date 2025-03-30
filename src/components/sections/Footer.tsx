@@ -13,16 +13,16 @@ export default function Footer() {
             <p className="text-sm">© 2025 Your Company. All Rights Reserved.</p>
           </div>
           <div className="flex space-x-8">
-            <a href="/about" className="text-md hover:text-yellow-400">
+            <a href="/" className="text-md hover:text-yellow-400">
               About
             </a>
-            <a href="/contact" className="text-md hover:text-yellow-400">
+            <a href="/" className="text-md hover:text-yellow-400">
               Contact
             </a>
-            <a href="/privacy-policy" className="text-md hover:text-yellow-400">
+            <a href="/" className="text-md hover:text-yellow-400">
               Privacy Policy
             </a>
-            <a href="/terms" className="text-md hover:text-yellow-400">
+            <a href="/" className="text-md hover:text-yellow-400">
               Terms of Service
             </a>
           </div>

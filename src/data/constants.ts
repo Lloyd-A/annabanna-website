@@ -1,5 +1,5 @@
-import { Tour } from "./interfaces";
-import { JAM } from "@/assets";
+import { AirportTransfer, Tour } from "./interfaces";
+import { JAM, KIN, MBJ } from "@/assets";
 export const tours: Tour[] = [
   {
     id: 1,
@@ -52,13 +52,33 @@ export const tours: Tour[] = [
   },
 ];
 
+export const airports: AirportTransfer[] = [
+  {
+    id: 1,
+    name: "Donald Sangster Int'l (MBJ)",
+    img: MBJ,
+    address: "Sangster+International+Airport",
+    overview: "",
+    itemsToBring: [],
+    faqs: [],
+  },
+  {
+    id: 2,
+    name: "Norman Manley Int'l (KIN)",
+    img: KIN,
+    address: "Norman+Manley+International+Airport",
+    overview: "",
+    itemsToBring: [],
+    faqs: [],
+  },
+];
 export const resorts = [
-  "Sandals Dunn's River",
+  // "Sandals Dunn's River",
   "Riu Aquarelle",
-  "Sandals Plantation",
-  "Royalton",
-  "Excellence",
-  "Ocean Coral Springs",
+  // "Sandals Plantation",
+  // "Royalton",
+  // "Excellence",
+  // "Ocean Coral Springs",
 ];
 
 export const pickupTimes = [

@@ -18,13 +18,16 @@ import {
   PiPersonSimpleHikeBold,
   PiCheckCircleFill,
 } from "react-icons/pi";
-import { tours } from "@/data/constants";
 import QuoteDrawer from "./QuoteDrawer";
 import { useState, useEffect } from "react";
 import Hover from "./Hover";
+import { AirportTransfer, Tour } from "@/data/interfaces";
 
-export default function TourTabs({ tourId }: { tourId: number }) {
-  const tour = tours.find((t) => t.id === tourId);
+interface TourTabsProps {
+  excursion: Tour | AirportTransfer;
+}
+export default function TourTabs({ excursion }: TourTabsProps) {
+  const tour = excursion;
 
   const [mapIframeUrl, setMapIframeUrl] = useState("");
 
@@ -66,7 +69,7 @@ export default function TourTabs({ tourId }: { tourId: number }) {
         <TabsContent value="overview">
           <Card className="mx-50 my-6 pl-4">
             <CardHeader>
-              <CardTitle className="text-4xl">Dunn's River Falls</CardTitle>
+              <CardTitle className="text-4xl">{tour?.name}</CardTitle>
               <Separator className="w-140 border-t-1 border-black" />
               {/*TODO: Edit card description to take icons and text from tour object. Use number of elems to set width
                           w-1/2 or w-1/3. Probably make maximum 3*/}
