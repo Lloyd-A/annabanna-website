@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { FALLS } from "@/assets";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -13,18 +13,18 @@ export default function Footer() {
             <p className="text-sm">© 2025 Your Company. All Rights Reserved.</p>
           </div>
           <div className="flex space-x-8">
-            <a href="/" className="text-md hover:text-yellow-400">
+            <Link href="/" className="text-md hover:text-yellow-400">
               About
-            </a>
-            <a href="/" className="text-md hover:text-yellow-400">
+            </Link>
+            <Link href="/" className="text-md hover:text-yellow-400">
               Contact
-            </a>
-            <a href="/" className="text-md hover:text-yellow-400">
+            </Link>
+            <Link href="/" className="text-md hover:text-yellow-400">
               Privacy Policy
-            </a>
-            <a href="/" className="text-md hover:text-yellow-400">
+            </Link>
+            <Link href="/" className="text-md hover:text-yellow-400">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { PiPersonSimpleSwimBold, PiPersonSimpleHikeBold } from "react-icons/pi";
 import { ImLocation } from "react-icons/im";
 import { Tour } from "@/data/interfaces";

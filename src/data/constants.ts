@@ -1,4 +1,4 @@
-import { AirportTransfer, Tour } from "./interfaces";
+import { AirportTransfer, BasePrices, Tour } from "./interfaces";
 import { JAM, KIN, MBJ } from "@/assets";
 export const tours: Tour[] = [
   {
@@ -145,5 +145,5 @@ export const costConfig = {
       "Mountain Hike": 75,
       "City Tour": 50,
     },
-  },
+  } as BasePrices,
 };

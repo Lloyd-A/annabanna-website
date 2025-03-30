@@ -59,7 +59,7 @@ export default function TourTabs({ excursion }: TourTabsProps) {
             What to Bring
           </TabsTrigger>
           <TabsTrigger value="FAQ" className="cursor-pointer hover:bg-gray-200">
-            FAQ's
+            FAQ&apos;s
           </TabsTrigger>
         </TabsList>
         <QuoteDrawer tourDestination={tour?.name as string} />

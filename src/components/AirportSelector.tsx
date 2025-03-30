@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MBJ, KIN } from "@/assets";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 
 export default function AirportSelector() {
   return (
@@ -20,7 +20,7 @@ export default function AirportSelector() {
             className="w-full h-full object-cover hover:scale-105 transition-transform"
           />
           <span className="airport-label airport-label-left bg-black rounded-md p-1">
-            Donald Sangster Int'l
+            Donald Sangster Int&apos;l
           </span>
         </Link>
 
@@ -35,7 +35,7 @@ export default function AirportSelector() {
             className="w-full h-full object-cover hover:scale-105 transition-transform"
           />
           <span className="airport-label airport-label-right bg-black rounded-md p-1">
-            Norman Manley Int'l
+            Norman Manley Int&apos;l
           </span>
         </Link>
       </CardContent>

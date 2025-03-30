@@ -1,6 +1,5 @@
 "use client";
 
-import { MBJ } from "@/assets";
 import TourTabs from "@/components/TourTabs";
 import { airports } from "@/data/constants";
 import { AirportTransfer } from "@/data/interfaces";
