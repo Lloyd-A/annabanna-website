@@ -38,6 +38,7 @@ import { Button } from "./ui/button";
 import { format } from "date-fns";
 import { resorts, pickupTimes, noOfPassengers } from "@/data/constants";
 import { useState } from "react";
+import { BasePrices } from "@/data/interfaces";
 
 const FormSchema = z.object({
   resort: z.string({
@@ -79,7 +80,7 @@ export default function QuoteDrawer({ tourDestination }: QuoteDrawerProps) {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     const cost = costCalculator(
       parseInt(data.passengerNum),
-      data.resort,
+      data.resort as keyof BasePrices,
       tourDestination,
       data.pickupTime
     );
