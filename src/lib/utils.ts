@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { costConfig } from "@/data/constants";
+import { BasePrices } from "@/data/interfaces";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -8,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function costCalculator(
   numPeople: number,
-  hotel: string,
+  hotel: keyof BasePrices,
   tourDestination: string,
   pickupTime: string // Expected format: "hh:mm AM/PM"
 ): string {
