@@ -2,7 +2,6 @@
 
 import { TOURS_HERO } from "@/assets";
 import Image from "next/image";
-import Link from "next/link";
 import { tours } from "@/data/constants";
 import TourCard from "@/components/TourCard";
 import Hover from "@/components/Hover";

@@ -13,7 +13,6 @@ const Hover: React.FC<HoverProps> = ({
   children,
   color = "#00ffcc", // Default color
   delay = 0.05,
-  size = 300,
 }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const targetPosition = useRef({ x: 0, y: 0 }); // Use ref to store target position

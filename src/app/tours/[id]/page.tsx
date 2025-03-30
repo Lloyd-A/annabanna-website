@@ -1,7 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { JAM } from "@/assets";
 import { tours } from "@/data/constants";
 import TourTabs from "@/components/TourTabs";
 import { use } from "react";

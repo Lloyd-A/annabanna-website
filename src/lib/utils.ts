@@ -31,7 +31,7 @@ export function costCalculator(
 
   // Check if pickup time is after 8 PM or before 12:30 AM
   const [time, period] = pickupTime.split(" ");
-  const [hours, minutes] = time.split(":").map(Number);
+  const [hours] = time.split(":").map(Number);
 
   let hour24 = hours % 12;
   if (period === "PM") hour24 += 12;
