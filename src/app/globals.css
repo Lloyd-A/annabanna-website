@@ -24,8 +24,36 @@
   animation: fade-in 1.2s ease-out;
 }
 
-.group:hover .group-hover\:scale-105 {
-  transform: scale(1.05);
+.left-half {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.right-half {
+  clip-path: polygon(100% 100%, 100% 0, 0 100%);
+}
+
+.airport-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.airport-label-left {
+  top: 50%; /* Moves text lower */
+  left: 20%; /* Moves text towards the left */
+  transform: translate(-50%, -50%);
+}
+
+/* Center text properly in the right triangle */
+.airport-label-right {
+  top: 50%; /* Moves text higher */
+  left: 80%; /* Moves text towards the right */
+  transform: translate(-50%, -50%);
 }
 
 :root {

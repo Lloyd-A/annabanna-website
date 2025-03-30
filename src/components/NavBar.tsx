@@ -65,16 +65,16 @@ export default function NavBar() {
             )}
           >
             {[
-              "Home",
-              "Airport Transfers",
-              "Island Tours",
-              "Shore Excursions",
-              "Contact Us",
+              { name: "Home", route: "/" },
+              { name: "Airport Transfers", route: "/airport" },
+              { name: "Island Tours", route: "/tours" },
+              { name: "Shore Excursions", route: "/" },
+              { name: "Contact Us", route: "/" },
             ].map((item) => (
-              <NavigationMenuItem key={item}>
-                <Link href="/" legacyBehavior passHref>
+              <NavigationMenuItem key={item.name}>
+                <Link href={item.route} legacyBehavior passHref>
                   <NavigationMenuLink className="text-white text-base font-bold hover:text-yellow-400 transition-all duration-200">
-                    {item}
+                    {item.name}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
