@@ -5,10 +5,17 @@ import { JTB, TPDCO, TEAM_JA, OCHO_RIOS } from "@/assets";
 
 export default function DriverCertifications() {
   return (
-    <section
-      className="relative py-20 bg-fixed bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${OCHO_RIOS.src})` }}
-    >
+    <section className="relative py-20 text-white overflow-hidden">
+      {/* Fixed background */}
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src={OCHO_RIOS}
+          alt="Background"
+          className="w-full h-full object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black opacity-30" />
+      </div>
       <div className="absolute inset-0 bg-black opacity-30"></div>
       <div className="relative z-10 py-12">
         <div className="container mx-auto text-center">
