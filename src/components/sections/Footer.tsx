@@ -1,11 +1,8 @@
 "use client";
 
-import { FALLS } from "@/assets";
-import { useScreenSize } from "@/hooks/useScreenSize";
 import Link from "next/link";
 
 export default function Footer() {
-  const screenSize = useScreenSize();
   return (
     <footer className="bg-black text-white py-6">
       <div className="max-w-6xl mx-auto px-6 pb-6">
