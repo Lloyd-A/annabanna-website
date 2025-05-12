@@ -7,7 +7,6 @@ import Hover from "@/components/Hover";
 import { useScreenSize } from "@/hooks/useScreenSize";
 
 const AirportTransfers = () => {
-  const screenSize = useScreenSize();
   return (
     <div className="relative w-full">
       <div className="relative w-full h-60 md:h-150">
