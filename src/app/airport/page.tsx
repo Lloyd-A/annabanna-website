@@ -4,7 +4,6 @@ import Image from "next/image";
 import { PLANE } from "@/assets";
 import AirportSelector from "@/components/AirportSelector";
 import Hover from "@/components/Hover";
-import { useScreenSize } from "@/hooks/useScreenSize";
 
 const AirportTransfers = () => {
   return (
