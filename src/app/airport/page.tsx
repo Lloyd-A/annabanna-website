@@ -8,7 +8,7 @@ import Hover from "@/components/Hover";
 const AirportTransfers = () => {
   return (
     <div className="relative w-full">
-      <div className="relative w-full h-150">
+      <div className="relative w-full h-60 md:h-150">
         {/* Background Image */}
         <Image
           src={PLANE}

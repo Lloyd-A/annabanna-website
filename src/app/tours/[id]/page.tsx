@@ -14,7 +14,7 @@ export default function TourPage({
   const tour = tours.find((t) => t.id === tourId) as Tour;
   return (
     <div className="relative w-full">
-      <div className="relative w-full h-150">
+      <div className="relative w-full h-60 md:h-150">
         {/* Background Image */}
         <Image
           src={tour.img}

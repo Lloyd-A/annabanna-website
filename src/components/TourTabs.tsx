@@ -44,51 +44,59 @@ export default function TourTabs({ excursion }: TourTabsProps) {
 
   return (
     <Tabs defaultValue="overview" className="w-full">
-      <div className="flex flex-row gap-8">
-        <TabsList className="relative w-[45%] bg-white mx-50">
+      <div className="grid grid-cols-1 place-items-center gap-2 px-4 md:flex md:flex-wrap md:items-center md:justify-between">
+        <TabsList className="flex-wrap bg-white">
           <TabsTrigger
             value="overview"
-            className="cursor-pointer hover:bg-gray-200"
+            className="cursor-pointer hover:bg-gray-200 md:w-[250px] w-[100px]"
           >
             Overview
           </TabsTrigger>
           <TabsTrigger
             value="bring"
-            className="cursor-pointer hover:bg-gray-200"
+            className="cursor-pointer hover:bg-gray-200 md:w-[250px] w-[100px]"
           >
             What to Bring
           </TabsTrigger>
-          <TabsTrigger value="FAQ" className="cursor-pointer hover:bg-gray-200">
+          <TabsTrigger
+            value="FAQ"
+            className="cursor-pointer hover:bg-gray-200 md:w-[250px] w-[100px]"
+          >
             FAQ&apos;s
           </TabsTrigger>
         </TabsList>
-        <QuoteDrawer tourDestination={tour?.name as string} />
+        <div className="w-full lg:w-auto flex justify-center">
+          <QuoteDrawer tourDestination={tour?.name as string} />
+        </div>
       </div>
-      <Separator className="border-t-2 border-gray-200 mt-[-8px]" />
+
+      <Separator className="border-t-2 border-gray-200 mt-4" />
+
       <Hover color="#fde047" delay={0.2} size={10}>
+        {/* --- OVERVIEW TAB --- */}
         <TabsContent value="overview">
-          <Card className="mx-50 my-6 pl-4">
+          <Card className="my-6 p-2 w-full max-w-7xl mx-auto">
             <CardHeader>
-              <CardTitle className="text-4xl">{tour?.name}</CardTitle>
-              <Separator className="w-140 border-t-1 border-black" />
-              {/*TODO: Edit card description to take icons and text from tour object. Use number of elems to set width
-                          w-1/2 or w-1/3. Probably make maximum 3*/}
-              <CardDescription className="text-black fspace-y-6 flex flex-wrap w-140">
-                <div className="flex-shrink-0 flex gap-2 flex-row w-[50%]">
-                  <PiPersonSimpleSwimBold className="text-3xl" />
-                  <p className="text-lg pt-2">Swimming</p>
+              <CardTitle className="text-2xl md:text-4xl">
+                {tour?.name}
+              </CardTitle>
+              <Separator className="my-2 border-t border-black" />
+              <CardDescription className="text-black flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 w-full md:w-[45%]">
+                  <PiPersonSimpleSwimBold className="text-2xl md:text-3xl" />
+                  <p className="text-lg">Swimming</p>
                 </div>
-                <div className="flex-shrink-0 flex gap-2 flex-row w-[50%]">
-                  <PiPersonSimpleHikeBold className="text-3xl" />
-                  <p className="text-lg pt-2">Waterfall Climbing</p>
+                <div className="flex items-center gap-2 w-full md:w-[45%]">
+                  <PiPersonSimpleHikeBold className="text-2xl md:text-3xl" />
+                  <p className="text-lg">Waterfall Climbing</p>
                 </div>
               </CardDescription>
             </CardHeader>
-            <CardContent className="flex flex-row gap-25">
-              <p className="w-140">{tour?.overview}</p>
+            <CardContent className="flex flex-col lg:flex-row gap-6">
+              <p className="w-full lg:w-1/2">{tour?.overview}</p>
               {mapIframeUrl && (
                 <iframe
-                  className="w-140 h-100 rounded-md"
+                  className="w-full lg:w-1/2 h-64 md:h-80 rounded-md"
                   style={{ border: 0 }}
                   loading="lazy"
                   allowFullScreen
@@ -98,23 +106,27 @@ export default function TourTabs({ excursion }: TourTabsProps) {
             </CardContent>
           </Card>
         </TabsContent>
+
+        {/* --- WHAT TO BRING TAB --- */}
         <TabsContent value="bring">
-          <Card className="mx-50 my-6 pl-4 h-160">
+          <Card className="my-6 p-4 w-full max-w-7xl mx-auto">
             <CardHeader>
-              <CardTitle className="text-4xl">What to Bring?</CardTitle>
-              <Separator className="w-140 border-t-1 border-black" />
+              <CardTitle className="text-2xl md:text-4xl">
+                What to Bring?
+              </CardTitle>
+              <Separator className="my-2 border-t border-black" />
             </CardHeader>
-            <CardContent className="flex flex-row gap-25">
-              <p className="w-140 space-y-4 text-2xl">
+            <CardContent className="flex flex-col lg:flex-row gap-6">
+              <div className="w-full lg:w-1/2 space-y-4 text-lg">
                 {tour?.itemsToBring.map((item, index) => (
-                  <span key={index} className="flex items-center gap-2">
+                  <div key={index} className="flex items-center gap-2">
                     <PiCheckCircleFill className="text-green-600" /> {item}
-                  </span>
+                  </div>
                 ))}
-              </p>
+              </div>
               {mapIframeUrl && (
                 <iframe
-                  className="w-140 h-100 rounded-md translate-y-[40px]"
+                  className="w-full lg:w-1/2 h-64 md:h-80 rounded-md"
                   style={{ border: 0 }}
                   loading="lazy"
                   allowFullScreen
@@ -124,19 +136,21 @@ export default function TourTabs({ excursion }: TourTabsProps) {
             </CardContent>
           </Card>
         </TabsContent>
+
+        {/* --- FAQ TAB --- */}
         <TabsContent value="FAQ">
-          <Card className="mx-50 my-6 pl-4 h-160">
+          <Card className="my-6 p-4 w-full max-w-7xl mx-auto">
             <CardHeader>
-              <CardTitle className="text-4xl">
+              <CardTitle className="text-2xl md:text-4xl">
                 Frequently Asked Questions
               </CardTitle>
-              <Separator className="w-140 border-t-1 border-black" />
+              <Separator className="my-2 border-t border-black" />
             </CardHeader>
-            <CardContent className="flex flex-row gap-25">
+            <CardContent className="flex flex-col lg:flex-row gap-6">
               <Accordion
                 type="single"
                 collapsible
-                className="w-140 space-y-4 text-lg"
+                className="w-full lg:w-1/2 space-y-4 text-lg"
               >
                 {tour?.faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
@@ -149,10 +163,9 @@ export default function TourTabs({ excursion }: TourTabsProps) {
                   </AccordionItem>
                 ))}
               </Accordion>
-
               {mapIframeUrl && (
                 <iframe
-                  className="w-140 h-100 rounded-md translate-y-[40px]"
+                  className="w-full lg:w-1/2 h-64 md:h-80 rounded-md"
                   style={{ border: 0 }}
                   loading="lazy"
                   allowFullScreen

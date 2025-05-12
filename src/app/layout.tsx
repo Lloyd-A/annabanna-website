@@ -21,8 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} min-h-screen flex flex-col`}>
+    <html lang="en" className="overflow-x-hidden">
+      <body
+        className={`${inter.variable} min-h-screen flex flex-col overflow-x-hidden`}
+      >
         <main className="flex-grow">
           <NavBar />
           {children}

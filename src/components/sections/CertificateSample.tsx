@@ -10,7 +10,7 @@ export default function CertificationSample() {
   //TODO: install once-ui and add tilt effect to certificate image like bookmark of threads
   return (
     <RevealFx speed="medium" delay={0} translateY={0}>
-      <div className="relative flex flex-row items-center justify-center gap-30 py-16">
+      <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 py-10 px-4">
         <TiltFx
           border="brand-alpha-weak"
           position="relative"
