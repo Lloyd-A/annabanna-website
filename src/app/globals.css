@@ -32,13 +32,21 @@
   clip-path: polygon(100% 100%, 100% 0, 0 100%);
 }
 
+.top-half {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.bottom-half {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
 .airport-label {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -54,6 +62,18 @@
   top: 50%; /* Moves text higher */
   left: 80%; /* Moves text towards the right */
   transform: translate(-50%, -50%);
+}
+
+.airport-label-left-sm {
+  top: 40%; /* Moves text lower */
+  left: 24%; /* Moves text towards the left */
+  transform: none;
+}
+
+.airport-label-right-sm {
+  top: 90%; /* Moves text higher */
+  left: 23%; /* Moves text towards the right */
+  transform: none;
 }
 
 :root {
