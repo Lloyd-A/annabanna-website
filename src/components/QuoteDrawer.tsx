@@ -70,12 +70,6 @@ export default function QuoteDrawer({ tourDestination }: QuoteDrawerProps) {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: {
-      resort: "",
-      passengerNum: "",
-      pickupDate: undefined,
-      pickupTime: "",
-    },
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
@@ -251,6 +245,7 @@ export default function QuoteDrawer({ tourDestination }: QuoteDrawerProps) {
                               />
                             </PopoverContent>
                           </Popover>
+                          <FormMessage />
                         </FormItem>
                       )}
                     />
