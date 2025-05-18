@@ -1,5 +1,9 @@
 import { AirportTransfer, BasePrices, Tour } from "./interfaces";
 import { JAM, KIN, MBJ } from "@/assets";
+import {
+  PiPersonSimpleSwimBold,
+  PiPersonSimpleHikeBold,
+} from "react-icons/pi";
 export const tours: Tour[] = [
   {
     id: 1,
@@ -12,6 +16,16 @@ export const tours: Tour[] = [
       "What makes Dunns River Falls so unique is the opportunity to climb the falls  the help  experienced guides. As you scale the smooth, flowing rocks, youll feel the cool, refreshing water rushing past you, offering an exhilarating combination of adventure and natural beauty. The climb is suitable for all ages and skill levels, making it an ideal activity for families, couples, and solo travelers alike." +
       "If youre looking to take it easy, you can also lounge on the beach or wade the shallow pools at the base of the falls, soaking in the stunning surroundings. The area also features a variety of local vendors, where you can pick up souvenirs and enjoy authentic Jamaican snacks." +
       "Whether youre an adrenaline seeker or simply want to enjoy the serenity of one of Jamaica’s most famous natural wonders, Dunn's River Falls offers something for everyone. It’s a must-see destination that perfectly captures the island's vibrant culture and natural beauty. Don’t forget your camera – the views are unforgettable!",
+    activities: [
+      {
+        icon: PiPersonSimpleSwimBold,
+        label: "Swimming",
+      },
+      {
+        icon: PiPersonSimpleHikeBold,
+        label: "Waterfall Climbing",
+      },
+    ],
     itemsToBring: [
       "Towels",
       "Swimwear",
