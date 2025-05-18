@@ -115,7 +115,7 @@ export default function QuoteDrawer({ tourDestination }: QuoteDrawerProps) {
               </div>
             </div>
           </div>
-          <div className="mt-3 mb-15 h-[250px]">
+          <div className="mt-3 mb-4 h-[250px]">
             <ScrollArea className="h-full w-full rounded-md">
               <Form {...form}>
                 <form
@@ -246,9 +246,7 @@ export default function QuoteDrawer({ tourDestination }: QuoteDrawerProps) {
                                 mode="single"
                                 selected={field.value}
                                 onSelect={field.onChange}
-                                disabled={(date) =>
-                                  date < new Date()
-                                }
+                                disabled={(date) => date < new Date()}
                                 initialFocus
                               />
                             </PopoverContent>
@@ -290,7 +288,7 @@ export default function QuoteDrawer({ tourDestination }: QuoteDrawerProps) {
               </Form>
             </ScrollArea>
           </div>
-          <DrawerFooter>
+          <DrawerFooter className="pb-[calc(1rem+env(safe-area-inset-bottom))]">
             <Button type="submit" form="costForm">
               Calculate Cost
             </Button>
