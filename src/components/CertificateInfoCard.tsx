@@ -1,19 +1,11 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 
 export default function CertificateInfoCard() {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
-      </CardHeader>
       <CardContent>
         <p className="max-w-150 text-lg px-2">
           The Team Jamaica certification represents a commitment to excellence
@@ -25,9 +17,6 @@ export default function CertificateInfoCard() {
           experience, showcasing the very best of Jamaican hospitality.
         </p>
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
     </Card>
   );
 }
