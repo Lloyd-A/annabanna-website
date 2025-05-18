@@ -32,7 +32,7 @@ export const tours: Tour[] = [
       "Sunscreen",
       "Water shoes",
       "Underwater Camera",
-      "Change of clothes or quick dry clothes",
+      "Quick dry or change of clothes",
     ],
     faqs: [
       {
