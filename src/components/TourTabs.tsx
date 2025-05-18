@@ -18,6 +18,7 @@ import QuoteDrawer from "./QuoteDrawer";
 import { useState, useEffect } from "react";
 import Hover from "./Hover";
 import { AirportTransfer, Tour } from "@/data/interfaces";
+import { Skeleton } from "./ui/skeleton";
 
 interface TourTabsProps {
   excursion: Tour | AirportTransfer;
@@ -94,7 +95,15 @@ export default function TourTabs({ excursion }: TourTabsProps) {
             </CardHeader>
             <CardContent className="flex flex-col lg:flex-row gap-6">
               <p className="w-full lg:w-1/2">{tour?.overview}</p>
-              {mapIframeUrl && (
+              {!mapIframeUrl ? (
+                <div className="w-full lg:w-1/2 h-64 md:h-80 rounded-md space-y-3">
+                  <Skeleton className="h-3/4 w-full rounded-xl" />
+                  <div className="space-y-2">
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-3/4" />
+                  </div>
+                </div>
+              ) : (
                 <iframe
                   className="w-full lg:w-1/2 h-64 md:h-80 rounded-md"
                   style={{ border: 0 }}
@@ -124,7 +133,15 @@ export default function TourTabs({ excursion }: TourTabsProps) {
                   </div>
                 ))}
               </div>
-              {mapIframeUrl && (
+              {!mapIframeUrl ? (
+                <div className="w-full lg:w-1/2 h-64 md:h-80 rounded-md space-y-3">
+                  <Skeleton className="h-3/4 w-full rounded-xl" />
+                  <div className="space-y-2">
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-3/4" />
+                  </div>
+                </div>
+              ) : (
                 <iframe
                   className="w-full lg:w-1/2 h-64 md:h-80 rounded-md"
                   style={{ border: 0 }}
@@ -163,7 +180,15 @@ export default function TourTabs({ excursion }: TourTabsProps) {
                   </AccordionItem>
                 ))}
               </Accordion>
-              {mapIframeUrl && (
+              {!mapIframeUrl ? (
+                <div className="w-full lg:w-1/2 h-64 md:h-80 rounded-md space-y-3">
+                  <Skeleton className="h-3/4 w-full rounded-xl" />
+                  <div className="space-y-2">
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-3/4" />
+                  </div>
+                </div>
+              ) : (
                 <iframe
                   className="w-full lg:w-1/2 h-64 md:h-80 rounded-md"
                   style={{ border: 0 }}
