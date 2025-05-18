@@ -6,6 +6,10 @@ export interface Tour {
   img: StaticImageData | string;
   address: string;
   overview: string;
+  activities?: {
+    label: string;
+    icon: React.ElementType;
+  }[];
   itemsToBring: string[];
   faqs: { question: string; answer: string }[];
 }
@@ -16,6 +20,10 @@ export interface AirportTransfer {
   img: StaticImageData | string;
   address: string;
   overview: string;
+  activities?: {
+    label: string;
+    icon: React.ElementType;
+  }[];
   itemsToBring: string[];
   faqs: { question: string; answer: string }[];
 }

@@ -13,11 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  PiPersonSimpleSwimBold,
-  PiPersonSimpleHikeBold,
-  PiCheckCircleFill,
-} from "react-icons/pi";
+import { PiCheckCircleFill } from "react-icons/pi";
 import QuoteDrawer from "./QuoteDrawer";
 import { useState, useEffect } from "react";
 import Hover from "./Hover";
@@ -82,14 +78,18 @@ export default function TourTabs({ excursion }: TourTabsProps) {
               </CardTitle>
               <Separator className="my-2 border-t border-black" />
               <CardDescription className="text-black flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 w-full md:w-[45%]">
-                  <PiPersonSimpleSwimBold className="text-2xl md:text-3xl" />
-                  <p className="text-lg">Swimming</p>
-                </div>
-                <div className="flex items-center gap-2 w-full md:w-[45%]">
-                  <PiPersonSimpleHikeBold className="text-2xl md:text-3xl" />
-                  <p className="text-lg">Waterfall Climbing</p>
-                </div>
+                {tour?.activities?.map((activity, index) => {
+                  const Icon = activity.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 w-full md:w-[45%]"
+                    >
+                      <Icon className="text-2xl md:text-3xl" />
+                      <p className="text-lg">{activity.label}</p>
+                    </div>
+                  );
+                })}
               </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col lg:flex-row gap-6">
